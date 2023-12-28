@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-12-28T14:02:15.898Z",
+    "end": "2023-12-28T14:02:25.355Z",
+    "duration": 9457
+  },
+  "results": [
+    {
+      "uuid": "64c76504-d3c6-40a1-9f0c-849cd61d378d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\loginWithDiffCreds.cy.ts",
+      "file": "cypress\\e2e\\tests\\loginWithDiffCreds.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c04f254-f033-4fd2-a3e5-c9a2839c61a4",
+          "title": "Try to log in with invalid and valid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should not login with invalid credentials",
+              "fullTitle": "Try to log in with invalid and valid credentials Should not login with invalid credentials",
+              "timedOut": null,
+              "duration": 4322,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPageService_1.loginPageService.openLoginPage();\nLoginPageService_1.loginPageService.fillLoginPageForm(invalidUser, invalidPass);\nLoginPage_1.loginPage.isErrorMessageShown().then(function (el) {\n    Cypress.dom.isVisible(el);\n});\nLoginPage_1.loginPage.isErrorMessageShown().then(function (el) {\n    expect(el.text()).equal(LoginPageTestData_1.loginPageTestData.errorMessageText);\n});",
+              "err": {},
+              "uuid": "80575a6d-157a-494f-842d-0960a025b353",
+              "parentUUID": "3c04f254-f033-4fd2-a3e5-c9a2839c61a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should login with valid credentials",
+              "fullTitle": "Try to log in with invalid and valid credentials Should login with valid credentials",
+              "timedOut": null,
+              "duration": 3122,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "LoginPageService_1.loginPageService.openLoginPage();\nLoginPageService_1.loginPageService.fillLoginPageForm(validUser, validPass);\nLoginPage_1.loginPage.getInventoryPageElement().then(function (el) {\n    Cypress.dom.isVisible(el);\n});",
+              "err": {},
+              "uuid": "d47162e8-027c-4579-b8fc-d6877da2d393",
+              "parentUUID": "3c04f254-f033-4fd2-a3e5-c9a2839c61a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "80575a6d-157a-494f-842d-0960a025b353",
+            "d47162e8-027c-4579-b8fc-d6877da2d393"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7444,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
